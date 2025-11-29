@@ -3,6 +3,18 @@
   "name": "Facebook Bulk Image Downloader",
   "version": "1.0",
   "description": "Download all high-res images from a Facebook post lightbox.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "facebook-downloader@daniel.extensions",
+      "strict_min_version": "100.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ],
+        "optional": []
+      }
+    }
+  },
   "permissions": [
     "downloads",
     "activeTab",
