@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "Facebook Bulk Image Downloader",
+  "version": "1.0",
+  "description": "Download all high-res images from a Facebook post lightbox.",
+  "permissions": [
+    "downloads",
+    "activeTab",
+    "scripting"
+  ],
+  "icons": {
+    "48": "icons/icon.svg"
+  },
+  "browser_action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Download Images",
+    "default_icon": "icons/icon.svg"
+  },
+  "background": {
+    "scripts": [
+      "background/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.facebook.com/*"
+      ],
+      "js": [
+        "content/scraper.js"
+      ],
+      "css": [
+        "content/styles.css"
+      ]
+    }
+  ]
+}
